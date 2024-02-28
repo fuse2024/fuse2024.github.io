@@ -185,7 +185,7 @@ button:focus,
     position: absolute;
     left: 15px;
     right: 15px;
-    top: 40px;
+    top: 10px;
     z-index: 9;
 }
 
