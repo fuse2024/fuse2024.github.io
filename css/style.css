@@ -322,6 +322,7 @@ a.navbar-brand,
         padding-left: 10px;
         padding-right: 10px;
     }
+
 }
 
 /*-------------------
@@ -366,6 +367,8 @@ a.navbar-brand,
 .jumbotron .content .content-content {
     /* background-color: rgb(0, 0, 0, 20%); */
     padding: 3em 0;
+    max-width: 1170px;
+    margin: auto;
 }
 
 .jumbotron .content h1 {
@@ -381,8 +384,8 @@ a.navbar-brand,
 }
 
 .jumbotron .content .event-date {
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 25px;
+    /* margin-bottom: 40px; */
 }
 
 .jumbotron .btn {
@@ -396,6 +399,10 @@ a.navbar-brand,
 
     .jumbotron .content h1 {
         font-size: 25px;
+    }
+
+    .jumbotron .content .event-date {
+        font-size: 22px;
     }
 
     .jumbotron .content p.lead {
@@ -449,85 +456,34 @@ a.navbar-brand,
  * Team Section
  *-----------------------------------------------*/
 
-.team .thumbnail {
-    padding: 0;
-    line-height: 22px;
-    background-color: transparent;
-    border: 0;
-    margin-bottom: 0px;
+.organizing-team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .organizer {
     text-align: center;
     font-size: 19px;
     font-weight: bold;
+    width: 175px;
+    padding: 5px;
+    /* border: 1px solid red; */
 }
 
 .organizer img {
     object-fit: cover;
-    width: 125px;
-    height: 125px;
+    width: 135px;
+    height: 135px;
     border-radius: 50%;
     margin-bottom: 1em;
 }
 
-@media (max-width : 767px) {
-    .team .thumbnail {
-        margin-bottom: 30px;
-    }
-}
-
 @media (max-width: 992px) {
     .organizer-info {
-        min-height: 130px;
+        /* min-height: 130px; */
     }
-}
-
-.team .thumbnail img {
-    width: 100%;
-}
-
-.team .thumbnail .caption {
-    padding: 5px;
-}
-
-.team .thumbnail h3 {
-    font-size: 16px;
-    font-weight: bold;
-
-    #margin: 0 40px;
-    text-transform: uppercase;
-    #padding: 10px 0;
-}
-
-
-
-.team .thumbnail h3 small {
-    font-size: 14px;
-    color: #888;
-    display: block;
-    font-weight: normal;
-}
-
-
-.team .social-links li {
-    display: inline-block;
-    margin-right: 3px;
-}
-
-.team .social-links li:last-child {
-    margin-right: 0;
-}
-
-.team .social-links li a {
-    display: block;
-    font-size: 14px;
-    color: #ccc;
-    padding: 0 5px;
-}
-
-.team .social-links li a:hover {
-    color: #333;
 }
 
 /* --------------------------
@@ -807,8 +763,14 @@ section div p.lead {
 
 .affiliation {
     font-size: 15px;
-    text-transform: initial;
     margin-top: 5px;
+    font-weight: normal;
+    color: #666;
+}
+
+.role {
+    font-size: 90%;
+    color: #4E7CAD;
     font-weight: normal;
 }
 
@@ -845,4 +807,39 @@ span.role {
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* CSS FOR ARROW */
+
+@keyframes bouncing {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 20px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.arrow {
+    animation: bouncing 1.5s infinite ease-in-out;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    height: 74px;
+    width: 74px;
+    margin-left: -37px;
+    position: absolute;
+}
+
+@media (max-width : 600px) {
+    .arrow {
+        height: 60px;
+        width: 60px;
+        margin-left: -30px;
+    }
 }
