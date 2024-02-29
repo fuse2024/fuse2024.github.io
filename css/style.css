@@ -344,6 +344,11 @@ a.navbar-brand,
     overflow: hidden;
 }
 
+.mini-jumbotron {
+    height: 300px;
+    min-height: 300px;
+}
+
 .jumbotron .content {
     color: #ffffff;
     position: absolute;
