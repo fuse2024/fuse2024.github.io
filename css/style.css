@@ -485,12 +485,6 @@ a.navbar-brand,
     margin-bottom: 1em;
 }
 
-@media (max-width: 992px) {
-    .organizer-info {
-        /* min-height: 130px; */
-    }
-}
-
 /* --------------------------
  * Agenda
  *---------------------------*/
@@ -847,4 +841,28 @@ img {
         width: 60px;
         margin-left: -30px;
     }
+}
+
+.sea-creatures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.sea-creature {
+    text-align: center;
+    font-size: 19px;
+    max-width: 300px;
+    padding: 5px;
+    /* border: 1px solid red; */
+}
+
+.sea-creature img {
+    object-fit: cover;
+    width: 275px;
+    height: 275px;
+    /* border-radius: 30%; */
+    margin-bottom: 1em;
 }
