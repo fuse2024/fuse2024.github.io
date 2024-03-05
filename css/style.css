@@ -887,3 +887,21 @@ img {
         height: auto;
     }
 }
+
+#participants-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.participant-affiliation {
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    #participants-list {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}
