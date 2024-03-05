@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500" rel="stylesheet" type="text/css">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/papaparse.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar">
@@ -129,7 +131,8 @@
             </div>
           </div>
           <div class="organizer">
-            <img src="https://sdlab.naist.jp/en/authors/yutaro-kashiwa/avatar_hu13ec5bdd0c7f847b61fbfe315f5594f8_37603_270x270_fill_q90_lanczos_center.jpg" />
+            <img
+              src="https://sdlab.naist.jp/en/authors/yutaro-kashiwa/avatar_hu13ec5bdd0c7f847b61fbfe315f5594f8_37603_270x270_fill_q90_lanczos_center.jpg" />
             <div class="organizer-info">
               <a target="_blank" href="https://sdlab.naist.jp/en/authors/yutaro-kashiwa/">Yutaro Kashiwa</a>
               <div class="role">Program Co-Chair</div>
@@ -176,10 +179,19 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <p class="lead center">Attendance to the symposium is by invitation only. The list of participants will be
-            updated soon.</p>
-          <!-- <ul class="reg_list">
-            </ul> -->
+          <p class="lead">Attendance to the symposium is by invitation only. Below is the list of confirmed participants so far.</p>
+
+          <script>
+            $.get('https://raw.githubusercontent.com/fuse2024/fuse2024.github.io/main/data/participants.csv',
+              function (data) {
+                var parsed = Papa.parse(data);
+                parsed.data.forEach((element) => {
+                  $("#participants-list").append('<li>' + element[0] + ' ' + element[1] + ' <div class="participant-affiliation">' + element[2] + ', ' + element[3] + '</div></li>');
+                });
+              });
+          </script>
+
+          <ul id="participants-list"></ul>
         </div>
       </div>
     </div>
@@ -276,10 +288,9 @@
   </div>
 
   <!-- SCRIPTS -->
-  <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
-  <script async defer
+  <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-3vIi_UKTTXeW_6S3mwCDeb1rY7WIpxo&callback=initMap"
     type="text/javascript"></script>
   <script src="js/bootstrap-toolkit.min.js"></script>
