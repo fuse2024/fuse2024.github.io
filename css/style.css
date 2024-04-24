@@ -7,7 +7,7 @@ Author: uiCookies.com
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.7em;
     color: #353e55;
     font-weight: 100;
@@ -761,7 +761,8 @@ section div p.lead {
     margin-bottom: 20px;
 }
 
-.affiliation, .participant-affiliation {
+.affiliation,
+.participant-affiliation {
     font-size: 15px;
     font-weight: normal;
     color: #666;
@@ -914,4 +915,16 @@ img {
         -webkit-columns: 1;
         -moz-columns: 1;
     }
+}
+
+.fees-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+.money {
+    width: 100px !important;
+    text-align: right;
 }
