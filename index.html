@@ -185,7 +185,7 @@
             $.get('https://raw.githubusercontent.com/fuse2024/fuse2024.github.io/main/data/participants.csv',
               function (data) {
                 var parsed = Papa.parse(data);
-                parsed.data.forEach((element) => {
+                parsed.data.sort().forEach((element) => {
                   $("#participants-list").append('<li>' + element[0] + ' ' + element[1] + ' <div class="participant-affiliation">' + element[2] + ', ' + element[3] + '</div></li>');
                 });
               });
@@ -245,8 +245,10 @@
               Tancha-Bay</a>. The hotel is located 50km from Naha Airport (OKA). To
             reach the hotel from the airport, you can use a shuttle bus (80 minutes, 1,400 JPY).
           </p>
-          <p class="lead">It is not a requirement to stay at this hotel, you may choose any other lodging that works for you.</p>
-          <p class="lead"><b>Important:</b> The registration at FUSE 2024 <u>does not</u> include lodging and meals. Each participant is responsible for booking their own room and paying for their own meals.</p>
+          <p class="lead">It is not a requirement to stay at this hotel, you may choose any other lodging that works for
+            you.</p>
+          <p class="lead"><b>Important:</b> The registration at FUSE 2024 <u>does not</u> include lodging and meals.
+            Each participant is responsible for booking their own room and paying for their own meals.</p>
           <p><b>Address</b>: 1496 Tancha, Onna Village, Kunigami, Okinawa, 904-0496 Japan</p>
           <img src="https://www.rizzan.co.jp/activity/images/beach001.jpg" />
         </div>
