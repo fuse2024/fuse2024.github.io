@@ -894,9 +894,9 @@ img {
 }
 
 #participants-list {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
     font-size: 19px;
     color: #649FDE;
 }
@@ -910,6 +910,14 @@ img {
 }
 
 @media (max-width: 700px) {
+    #participants-list {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+}
+
+@media (max-width: 500px) {
     #participants-list {
         columns: 1;
         -webkit-columns: 1;
