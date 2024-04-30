@@ -186,7 +186,8 @@
               function (data) {
                 var parsed = Papa.parse(data);
                 parsed.data.sort().forEach((element) => {
-                  $("#participants-list").append('<li>' + element[0] + ' ' + element[1] + ' <div class="participant-affiliation">' + element[2] + ', ' + element[3] + '</div></li>');
+                  if (element.length > 3)
+                    $("#participants-list").append('<li>' + element[0] + ' ' + element[1] + ' <div class="participant-affiliation">' + element[2] + ', ' + element[3] + '</div></li>');
                 });
               });
           </script>
